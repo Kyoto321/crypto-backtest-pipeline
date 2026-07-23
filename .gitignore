@@ -13,8 +13,7 @@ venv/
 env/
 ENV/
 
-# Outputs (generated — not committed; reviewer runs the code to see them)
-outputs/
+
 
 # IDE
 .vscode/
