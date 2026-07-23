@@ -37,3 +37,10 @@ Thumbs.db
 dist/
 build/
 *.egg-info/
+
+# Generated outputs
+outputs/
+
+/outputs
+
+outputs
