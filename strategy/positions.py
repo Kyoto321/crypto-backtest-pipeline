@@ -71,14 +71,14 @@ def extract_trades(signals_df: pd.DataFrame, timeframe: str) -> List[TradeRecord
     for bar_idx, (timestamp, pos) in enumerate(position.items()):
 
         if not in_trade and pos == 1.0:
-            # ── ENTRY ──────────────────────────────────────────────────────────
+            # ENTRY
             in_trade = True
             entry_time = timestamp
             entry_price = close[timestamp]
             entry_bar_idx = bar_idx
 
         elif in_trade and pos == 0.0:
-            # ── EXIT (signal-driven) ───────────────────────────────────────────
+            # EXIT (signal-driven)
             exit_time = timestamp
             exit_price = close[timestamp]
             holding_bars = bar_idx - entry_bar_idx
@@ -101,7 +101,7 @@ def extract_trades(signals_df: pd.DataFrame, timeframe: str) -> List[TradeRecord
             entry_price = None
             entry_bar_idx = None
 
-    # ── Handle open trade at end of data ──────────────────────────────────────
+    # Handle open trade at end of data 
     if in_trade and entry_time is not None:
         last_timestamp = signals_df.index[-1]
         exit_price = close[last_timestamp]

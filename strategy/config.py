@@ -24,10 +24,10 @@ Why these specific MA lengths?
 from dataclasses import dataclass, field
 from pathlib import Path
 
-# ─── Project root ─────────────────────────────────────────────────────────────
+# Project root
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-# ─── Raw data paths ───────────────────────────────────────────────────────────
+# Raw data paths
 DATA_DIR = PROJECT_ROOT  # CSVs live at the project root
 
 DATA_FILES = {
@@ -35,7 +35,7 @@ DATA_FILES = {
     "4h": DATA_DIR / "BTCUSDT-klines-4h-2026-01-01_2026-07-16.csv",
 }
 
-# ─── Output directories ───────────────────────────────────────────────────────
+# Output directories
 OUTPUT_DIR = PROJECT_ROOT / "outputs"
 CHARTS_DIR = OUTPUT_DIR / "charts"
 LOGS_DIR = OUTPUT_DIR / "logs"
@@ -107,7 +107,7 @@ class StrategyConfig:
         return f"{self.timeframe} MA({self.fast_window}/{self.slow_window})"
 
 
-# ─── Preset configs (used by main.py) ─────────────────────────────────────────
+# Preset configs (used by main.py) 
 
 CONFIG_1H = StrategyConfig(
     timeframe="1h",
