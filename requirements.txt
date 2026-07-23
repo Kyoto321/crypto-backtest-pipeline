@@ -1,0 +1,25 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Ark Capital — Data Engineer Assessment
+# requirements.txt
+#
+# Pin minor versions for reproducibility, allow patch updates.
+# Install with: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Core data manipulation
+pandas>=2.2,<3.0
+numpy>=1.26
+
+# Visualisation
+matplotlib>=3.8,<4.0
+plotly>=5.20,<6.0
+kaleido>=0.2,<1.0          # Plotly static image export (PNG/SVG)
+
+# Utilities
+python-dateutil>=2.9       # Robust datetime parsing
+pytz>=2024.1               # Timezone handling
+
+# Optional — code quality (not needed to run the project)
+# flake8>=7.0
+# black>=24.0
+# pytest>=8.0
